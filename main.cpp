@@ -4,7 +4,7 @@
 #include <vector>
 #include "snippets.h"
 
-class player{
+class Player{
 public:
     std::string representation;
     int posR;
@@ -12,7 +12,7 @@ public:
     int c_health;
 };
 
-void init(std::string world[r][c], class player &Player){
+void init(std::string world[r][c], class Player &Player){
     Player.representation = rps;
     Player.c_health = g_health;
     Player.posR = r - 2;
@@ -37,7 +37,7 @@ void draw(std::string world[r][c]){
     }
 }
 
-void input_t(std::string world[r][c], class player Player){
+void input_t(std::string world[r][c], class Player Player){
     std::string keypress;
 
     while(true){
@@ -49,8 +49,8 @@ void input_t(std::string world[r][c], class player Player){
 int main(){
     std::string A_world[r][c];
 
-    player Player;
-    init(A_world, Player);
+    Player player;
+    init(A_world, player);
 
     draw(A_world);
 
